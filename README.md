@@ -21,6 +21,12 @@ You should then specify the Wavelength AZ location you want to use.  A list of W
 const wavelengthAZ: string = 'us-west-2-wl1-sfo-wlz-1';
 ```
 
+Lastly, create a new key pair using the AWS console and update line 124 in the index.js file with your key pair name.
+
+```typescript
+keyName: 'wl-cdk-demo-1', // <= make sure to create a new EC2 KeyPair to enable SSH access
+```
+
 To build this app, you need to be in this example's root folder. Then run the following:
 
 ```bash
