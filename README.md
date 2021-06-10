@@ -14,14 +14,14 @@ AWS_ACCOUNT_NUMBER=xxXxXxxXXxXxx
 AWS_ACCOUNT_REGION=us-west-2
 ```
 
-You should then specify the Wavelength AZ location you want to use.  A list of Wavelength zone locations can be found [here](https://aws.amazon.com/wavelength/locations/).
+You should then specify the Wavelength AZ location you want to use by updating the `wavelengthAZ` string const on line 15 in `index.ts`.  A list of Wavelength zone locations can be found [here](https://aws.amazon.com/wavelength/locations/).
 
 ```typescript
 // Wavelength zones based on region availability
 const wavelengthAZ: string = 'us-west-2-wl1-sfo-wlz-1';
 ```
 
-Lastly, create a new key pair using the AWS console and update line 124 in the index.js file with your key pair name.
+Lastly, create a new key pair using the AWS console and update line 124 in the `index.ts` file with your key pair name.
 
 ```typescript
 keyName: 'wl-cdk-demo-1', // <= make sure to create a new EC2 KeyPair to enable SSH access
